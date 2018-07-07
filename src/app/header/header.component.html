@@ -1,0 +1,119 @@
+<div class="container-fluid" style="height: calc(100% - 34px);">
+  <div class="row" style="height: 100%;">
+    <div [ngClass]="{'col-md-2': menuStyle, 'col-md-1': !menuStyle}" class="bg-dark text-white col-menu">
+      <div class="sidebar-header">
+        <div class="logo clearfix">
+          <a class="logo-text float-left" href="#">
+            <div class="logo-img">
+              <img src="https://pixinvent.com/apex-angular-4-bootstrap-admin-template/demo-2/assets/img/logo.png">
+            </div>
+            <span [ngClass]="{'hidden': !menuStyle}" class="text align-middle">APEX</span>
+          </a>
+          <a [ngClass]="{'hidden': menuStyle}" (click)="openMenu(true)" class="nav-toggle float-right" href="javascript:;" id="sidebarToggle">
+            <i class="material-icons text-white">fullscreen</i>
+          </a>
+          <a [ngClass]="{'hidden': !menuStyle}" (click)="openMenu(false)" class="nav-close float-right" href="javascript:;" id="sidebarClose">
+            <i class="material-icons text-white">fullscreen_exit</i>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-container">
+        <ul class="navigation">                        
+          <li>
+            <a [routerLink]="['/dashboard']">
+              <i class="material-icons text-white">dashboard</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}" >Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/screens']">
+              <i class="material-icons text-white">tv</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}">Pantallas</span>                      
+            </a>                                    
+          </li>
+          <li>
+            <a [routerLink]="['/users']">
+              <i class="material-icons text-white">people</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}">Usuarios</span>                      
+            </a>                                                    
+          </li>
+          <li>
+            <a [routerLink]="['/reports']">
+              <i class="material-icons text-white">trending_up</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}">Reportes</span>                    
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/campaign']">
+              <i class="material-icons text-white">cast</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}">Campañas</span>                      
+            </a>                                                    
+          </li>
+          <li>
+            <a [routerLink]="['/company']">
+              <i class="material-icons text-white">location_city</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}">Empresas</span>
+            </a>                                                    
+          </li>
+          <li>
+            <a [routerLink]="['/auction']">
+              <i class="material-icons text-white">local_atm</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}">Subastas</span>                      
+            </a>                                                      
+          </li>
+          <li>
+            <a [routerLink]="['/typeUser']">
+              <i class="material-icons text-white">vpn_key</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}">Tipo de Usuario</span>
+            </a>                                  
+          </li>
+          <li class="has-sub">
+            <a href="/apex-angular-4-bootstrap-admin-template/demo-2/dashboard/dashboard1">
+              <i class="material-icons">library_books</i>
+              <span [ngClass]="{'hidden': !menuStyle, 'menu-title': menuStyle}">Catalogos</span>
+              <span class="badge badge-pill badge-dark float-right mr-1 mt-1">2</span>
+            </a>
+            <ul class="menu-content">
+              <li>
+                <a href="/apex-angular-4-bootstrap-admin-template/demo-2/dashboard/dashboard1">
+                  <i></i>
+                    <span class="menu-title">Catalogos 1</span>                              
+                </a>
+              </li>
+              <li>
+                <a href="/apex-angular-4-bootstrap-admin-template/demo-2/dashboard/dashboard2">
+                  <i></i>
+                  <span class="menu-title">Catalogos 2</span>                              
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div [ngClass]="{'col-md-10': menuStyle, 'col-md-11': !menuStyle}" style="padding-left: 0px;padding-right: 0px;">
+      <div class="col-md-12" style="padding-left: 0px;padding-right: 0px;">
+          <header>
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="material-icons text-muted">translate</i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="material-icons text-muted">notifications</i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="material-icons text-muted">person</i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="material-icons text-muted">settings</i></a>
+              </li>
+            </ul>             
+          </header>
+      </div>
+      <div class="col-md-12">      
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

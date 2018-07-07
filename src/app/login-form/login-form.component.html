@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+      <form (submit)="loginUser($event)">
+        <div class="form-group">
+          <label for="exampleDropdownFormEmail1">Correo electronico</label>
+          <input type="email" class="form-control" placeholder="email@ejemplo.com" [(ngModel)]="modelUser.email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="exampleDropdownFormPassword1">Contraseña</label>
+          <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="modelUser.password" name="password">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe" [(ngModel)]="modelUser.rememberMe" name="rememberMe">
+          <label class="form-check-label" for="rememberMe">
+            Recordarme
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">¿Eres nuevo? Regístrate</a>
+      <a class="dropdown-item" href="#">¿Olvidaste tu contraseña?</a>
+  </div>  
+</div>
